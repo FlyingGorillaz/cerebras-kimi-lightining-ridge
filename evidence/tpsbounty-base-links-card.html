@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Speed Bounty product links</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; min-height: 100vh; background: #0b1020; color: #f8fafc; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  main { width: min(980px, 92vw); margin: 7vh auto 32vh; }
+  h1 { font-size: clamp(34px, 4.5vw, 64px); margin: 0 0 16px; letter-spacing: -0.04em; }
+  .badge { display: inline-block; border: 1px solid #fb923c; color: #fdba74; border-radius: 999px; padding: 12px 20px; margin-bottom: 36px; font-size: clamp(20px, 2.4vw, 30px); }
+  ol { list-style: none; counter-reset: gift; margin: 0; padding: 0; display: grid; gap: 30px; }
+  li { counter-increment: gift; border: 1px solid #334155; border-radius: 18px; padding: 28px 26px; background: #111827; }
+  li::before { content: counter(gift) ". "; color: #fb923c; font-weight: 700; }
+  .name { font-size: clamp(24px, 3vw, 38px); font-weight: 700; margin-bottom: 8px; }
+  .meta { color: #cbd5e1; margin-bottom: 12px; font-size: clamp(16px, 1.8vw, 22px); }
+  a { color: #7dd3fc; overflow-wrap: anywhere; font-size: clamp(18px, 2vw, 26px); }
+  .note { margin-top: 40px; color: #94a3b8; font-size: clamp(15px, 1.6vw, 20px); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Speed Bounty entry</h1>
+  <div class="badge">1,713 TPS p90 · 1,218 mean (server)</div>
+  <ol>
+    <li><div class="name">Original Pillow</div><div class="meta">Casper · $75.00 USD</div><a href="https://casper.com/products/pillows">https://casper.com/products/pillows</a></li>
+    <li><div class="name">Dino World XL 50 Piece Set</div><div class="meta">MAGNA-TILES · $129.99 USD</div><a href="https://www.magnatiles.com/products/dino-world-xl-50-piece-set">https://www.magnatiles.com/products/dino-world-xl-50-piece-set</a></li>
+    <li><div class="name">The Everywhere Bag in Jet Black</div><div class="meta">Away · $148.00 USD</div><a href="https://www.awaytravel.com/products/everywhere-bag-jet-black">https://www.awaytravel.com/products/everywhere-bag-jet-black</a></li>
+    <li><div class="name">Allbirds Wool Slipper - Light Tan</div><div class="meta">Allbirds · $15.60 USD</div><a href="https://www.allbirds.com/products/allbirds-slipper">https://www.allbirds.com/products/allbirds-slipper</a></li>
+    <li><div class="name">Stagg EKG Electric Kettle</div><div class="meta">Fellow · $143.96 USD</div><a href="https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle">https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle</a></li>
+  </ol>
+  <p class="note">Five live retail product pages fetched during the patched OpenClaw run; prices are storefront USD data.</p>
+</main>
+</body>
+</html>

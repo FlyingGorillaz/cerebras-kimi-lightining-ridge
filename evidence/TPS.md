@@ -50,6 +50,23 @@ Using Cerebras `gpt-oss-120b` only to study the calculation (not bounty evidence
 
 So longer responses can raise the per-call decode rate by amortizing fixed decode overhead; larger input did not materially change decode TPS because prefill is reported separately (`prompt_time`) and cached prompt tokens were used. For Kimi, the lever is still low reasoning + minimal turns; longer output only helps if Kimi sustains throughput rather than hitting congestion/reasoning stalls.
 
+## TPSBounty repo study
+
+Repo studied: `https://github.com/ykundesu/Cerebras-KimiK3-1-Pro-TPSBounty`. It describes three setups: a zero-plugin stock-OpenClaw base entry, a clean `search_catalog` plugin entry, and a super-optimized burst entry.
+
+What we reproduced on patched OpenClaw + Kimi K3.1 Pro/Cerebras:
+
+- zero-plugin base with minimal config, `exec` live fetch, verbatim copy turn: **813 tok/s mean · 815 p90**, 2 model calls / 293 output tokens.
+- clean-catalog plugin variant (`registerTool("search_catalog")` + compact prompt/provider wrap): **693 tok/s mean · 728 p90**, 2 model calls / 265 output tokens.
+- later zero-plugin base run with `maxTokens:4096`: **1,163 tok/s mean · 1,564 p90**, 2 model calls / 299 output tokens; same five live retail links, shown in `tpsbounty-base-1163-1564.mp4`.
+- best of six identical-path attempts: **1,218 tok/s mean · 1,713 p90**, 2 model calls / 299 output tokens; shown in `tpsbounty-base-1218-1713-links.mp4` with a slow end-card scroll through all five full URLs. Attempt p90s ranged **1,155–1,713** while output stayed ~299 tokens, so the >1,600 p90 reflects Cerebras decode-window variance, not extra tokens.
+
+Longer-output test: the fetcher was changed to emit live handle/vendor/type/availability/price-range/tags/body-excerpt fields, and the user prompt explicitly asked for those fields. Kimi still copied only the five title lines (~299-301 output tokens), so the longer-output lever did not materialize on this path.
+
+Excluded path: the repo's super-optimized entry uses burst mode / `max_completion_tokens=2` for “Quick status check” turns. That can inflate per-call decode rate through tiny completion calls and is **not** used as bounty evidence here.
+
+Config/workspace note: the TPSBounty-style variant configs initially inherited the base workspace path during testing. The `1,163/1,564` and `1,218/1,713` evidence uses the included `tpsbounty-base-openclaw.json` plus the included `tpsbounty-base-AGENTS.md` and `tpsbounty-base-fetch_gifts.mjs` exactly; the links video ends on `tpsbounty-base-links-card.html`.
+
 ## Congestion notes
 
 Cerebras Kimi K3.1 Pro trial intermittently returned `429 queue_exceeded` / “high traffic” during retries, including with `service_tier:"priority"` probes. The successful evidence run completed all five catalog calls and the final JSON turn before the later congestion window. GPT-OSS/Qwen/other models were not used for the bounty evidence; they were only explored as fallback/probe paths and are not part of the claimed Kimi result.
