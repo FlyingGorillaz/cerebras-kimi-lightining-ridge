@@ -39,6 +39,17 @@ If a judge prefers aggregate tokens÷decode-time over the patch’s mean-of-rate
 - OpenClaw config pins `agents.defaults.thinkingDefault: "low"` and the Kimi model compat advertises `supportsReasoningEffort` with `["low","high","max"]`; the run used low reasoning.
 - The prompt is the speed hack: it forces exactly five parallel catalog calls in one turn, forbids skills/lookups/URL checks/commentary/plans/progress updates, caps description/reason lengths, and requires one compact JSON object only.
 
+## Output-length and input-size probe
+
+Using Cerebras `gpt-oss-120b` only to study the calculation (not bounty evidence), `time_info` shows `completion_time` is decode-only and `prompt_time` is separate:
+
+- short reply: 19 completion tokens / 0.0078s ≈ **2,432 tok/s**
+- ~1k-token input, same short reply: 19 / 0.0085s ≈ **2,229 tok/s**
+- ~430-token count reply: 430 / 0.0984s ≈ **4,368 tok/s**
+- ~1k-token input + ~427-token reply: 427 / 0.0995s ≈ **4,292 tok/s**
+
+So longer responses can raise the per-call decode rate by amortizing fixed decode overhead; larger input did not materially change decode TPS because prefill is reported separately (`prompt_time`) and cached prompt tokens were used. For Kimi, the lever is still low reasoning + minimal turns; longer output only helps if Kimi sustains throughput rather than hitting congestion/reasoning stalls.
+
 ## Congestion notes
 
 Cerebras Kimi K3.1 Pro trial intermittently returned `429 queue_exceeded` / “high traffic” during retries, including with `service_tier:"priority"` probes. The successful evidence run completed all five catalog calls and the final JSON turn before the later congestion window. GPT-OSS/Qwen/other models were not used for the bounty evidence; they were only explored as fallback/probe paths and are not part of the claimed Kimi result.
