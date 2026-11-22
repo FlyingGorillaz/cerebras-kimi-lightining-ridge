@@ -12,14 +12,17 @@ This is server decode TPS, not wall-clock task time and not client network throu
 
 ## Final evidence numbers
 
-The recorder-rendered `evidence/tpsbounty-base-1218-1713-links.mp4` shows the real Control UI session:
+The recorder-rendered `evidence/christmas-1290-1722-links.mp4` shows the real Control UI session:
 
-- speed-patch badge: `1,218 tok/s mean · 1,713 p90 (server)`
+- speed-patch badge: `1,290 tok/s mean · 1,722 p90 (server)`
 - model calls: 2
-- output tokens: 299
-- Discord one-number entry: `1,713 TPS p90 (1,218 mean)`
+- output tokens: 305
+- Discord one-number entry: `1,722 TPS p90 (1,290 mean)`
+- OpenClaw session id: `1a21ad98d0b648b79f74e6f997363b82`
 
-Six identical-path attempts are preserved in `evidence/tpsbounty-attempts/`:
+The earlier generic-gift recorder video `evidence/tpsbounty-base-1218-1713-links.mp4` showed `1,218 mean · 1,713 p90`; the Christmas run above is the current best compliant evidence.
+
+For the earlier generic-gift run, six identical-path attempts are preserved in `evidence/tpsbounty-attempts/`:
 
 | attempt | badge | session id |
 |---:|---|---|
@@ -30,15 +33,15 @@ Six identical-path attempts are preserved in `evidence/tpsbounty-attempts/`:
 | 5 | 1,001 mean · 1,301 p90 | `8737da81292a48589da79da9bf211148` |
 | 6 | 1,139 mean · 1,547 p90 | `eb8be61d34b544aa86b9afc7d7be239c` |
 
-Attempt p90s ranged **1,155–1,713** while output stayed ~299 tokens. The >1,600 p90 is a Cerebras decode-window result, not extra generated tokens.
+For that generic-gift run, attempt p90s ranged **1,155–1,713** while output stayed ~299 tokens. The >1,600 p90 is a Cerebras decode-window result, not extra generated tokens.
 
 ## Christmas-specific follow-up
 
-After the compliance audit, the fetcher/prompt was switched to strictly seasonal products (see `CHRISTMAS.md`). Compliant badges remained below the preserved entry: compact two-call best `1,285 mean · 1,707 p90`, verbose two-call best `1,149 mean · 1,257 p90`, and six-call best `1,117 mean · 1,549 p90`. The six-call path used five genuine single-store `exec` fetches plus one copy turn; a split-copy variant collapsed back to two model calls and was not used.
+After the compliance audit, the fetcher/prompt was switched to strictly seasonal products (see `CHRISTMAS.md`). The best compliant Christmas badge is now compact two-call `1,290 mean · 1,722 p90` (`christmas-attempts/compact-two-call-1290-1722.*`), which beats the earlier generic-gift p90. Verbose copy stayed lower (`1,149 mean · 1,257 p90` best), and the six-call path used five genuine single-store `exec` fetches plus one copy turn (`1,117 mean · 1,549 p90` best). A split-copy variant collapsed back to two model calls and was not used.
 
 ## Why p90 can be much higher than mean
 
-With only two model calls, the nearest-rank p90 selects the faster of the two per-call rates, while the mean averages the fast call with the slower call. So `1,218 mean · 1,713 p90` means one call decoded at about 1,713 tok/s and the other at about 723 tok/s on average. This is a property of the official patch math over two calls, not a client-side calculation.
+With only two model calls, the nearest-rank p90 selects the faster of the two per-call rates, while the mean averages the fast call with the slower call. So `1,290 mean · 1,722 p90` means one call decoded at about 1,722 tok/s and the other at about 858 tok/s on average. This is a property of the official patch math over two calls, not a client-side calculation.
 
 ## Reasoning and prompt speed hacks
 
@@ -60,7 +63,7 @@ The compliant pieces we kept were stock OpenClaw config minimization, low reason
 
 ## Config/workspace note
 
-The TPSBounty-style variant configs initially inherited the base workspace path during testing. The shipped evidence uses `evidence/tpsbounty-base-openclaw.json`, whose `agents.defaults.workspace` points to the workspace containing `tpsbounty-base-AGENTS.md` and `tpsbounty-base-fetch_gifts.mjs`. The user prompt is preserved in `evidence/tpsbounty-base-user-prompt.txt`.
+The TPSBounty-style variant configs initially inherited the base workspace path during testing. The shipped sanitized config is `evidence/tpsbounty-base-openclaw.json`; for the Christmas entry, point `agents.defaults.workspace` at the workspace containing `christmas-AGENTS-two-call.md` and `christmas-fetch_gifts.mjs`. The winning prompt/state is preserved in `christmas-attempts/compact-two-call-1290-1722.txt`; the earlier generic prompt is `tpsbounty-base-user-prompt.txt`.
 
 ## Congestion notes
 
@@ -70,8 +73,8 @@ Cerebras Kimi K3.1 Pro trial intermittently returned `429 queue_exceeded` / “h
 
 1. Use patched OpenClaw with the official speed patch so Cerebras `time_info`/`usage` is parsed into `serverGeneration` and the UI badge path.
 2. Configure the Cerebras provider with model `moonshotai-kimi-k3.1-pro-trial` (see `tpsbounty-base-openclaw.json`; keep the API key in `CEREBRAS_API_KEY`).
-3. Put `tpsbounty-base-AGENTS.md` and `tpsbounty-base-fetch_gifts.mjs` in the configured workspace.
-4. Send the prompt in `tpsbounty-base-user-prompt.txt`. It must perform one live `exec` fetch for five retail products and then copy the five lines verbatim.
-5. Run several attempts, keep the best official speed-patch badge, and record the session plus the `tpsbounty-base-links-card.html` end card.
+3. Put `christmas-AGENTS-two-call.md` and `christmas-fetch_gifts.mjs` in the configured workspace.
+4. Send the Christmas product prompt shown in `christmas-attempts/compact-two-call-1290-1722.txt`. It must perform one live `exec` fetch for five seasonal products and then copy the five lines verbatim.
+5. Run several attempts, keep the best official speed-patch badge, and record the session plus the `christmas-links-card.html` end card.
 
 No hard-coded products, no client-side TPS spoofing, no non-Kimi bounty model, no burst padding, and no secrets are included in this repo.

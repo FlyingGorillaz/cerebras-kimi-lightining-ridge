@@ -1,0 +1,175 @@
+{
+  "url": "http://127.0.0.1:18793/chat/main/1a21ad98d0b648b79f74e6f997363b82",
+  "badges": [
+    {
+      "text": "1,290 tok/s mean · 1,722 p90 (server)",
+      "title": "mean: the average of 2 model calls' rates, 1,290 tok/s.\np90: 90% of 2 model calls ran at or below 1,722 tok/s.\nReported by the server: 305 tokens in 0.2 s of decode over 2 model calls.",
+      "cls": "chat-gen-speed"
+    },
+    {
+      "text": "1,290 tok/s mean · 1,722 p90 (server)",
+      "title": "mean: the average of 2 model calls' rates, 1,290 tok/s.\np90: 90% of 2 model calls ran at or below 1,722 tok/s.\nReported by the server: 305 tokens in 0.2 s of decode over 2 model calls.",
+      "cls": "chat-gen-speed chat-gen-speed--summary"
+    }
+  ],
+  "links": [
+    {
+      "text": "Skip to main content",
+      "href": "http://127.0.0.1:18793/chat/main/1a21ad98d0b648b79f74e6f997363b82#control-ui-main"
+    },
+    {
+      "text": "",
+      "href": "http://127.0.0.1:18793/new?agent=main"
+    },
+    {
+      "text": "Home",
+      "href": "http://127.0.0.1:18793/chat/main"
+    },
+    {
+      "text": "Agents",
+      "href": "http://127.0.0.1:18793/agents"
+    },
+    {
+      "text": "Dashboards",
+      "href": "http://127.0.0.1:18793/dashboards"
+    },
+    {
+      "text": "Systems",
+      "href": "http://127.0.0.1:18793/systems"
+    },
+    {
+      "text": "Automations",
+      "href": "http://127.0.0.1:18793/automations"
+    },
+    {
+      "text": "Plugins",
+      "href": "http://127.0.0.1:18793/plugins"
+    },
+    {
+      "text": "G\nShared owner\n73",
+      "href": "http://127.0.0.1:18793/activity/gateway-owner"
+    },
+    {
+      "text": "",
+      "href": "http://127.0.0.1:18793/new?agent=main"
+    },
+    {
+      "text": "Christmas gifts from retail websites",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gifts-from-retail-websites-1a21ad98d0b648b79f74e6f997363b82"
+    },
+    {
+      "text": "Christmas gift product research",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gift-product-research-fe1349cf05cd4afc8b22c9a42385fe3b"
+    },
+    {
+      "text": "Real Christmas gift product research",
+      "href": "http://127.0.0.1:18793/chat/main/real-christmas-gift-product-research-15e10029da3c49c5981a439bef7cc559"
+    },
+    {
+      "text": "Christmas gifts with verified product details",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gifts-with-verified-product-details-95e2f64d581849c0bf9c152d028eff2d"
+    },
+    {
+      "text": "Sourcing real Christmas gifts online",
+      "href": "http://127.0.0.1:18793/chat/main/sourcing-real-christmas-gifts-online-cfd6e043e3414c698fe31c4ac4950d35"
+    },
+    {
+      "text": "Christmas gifts from five retailers",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gifts-from-five-retailers-d569853267b541af96d8cf7f35e8f32e"
+    },
+    {
+      "text": "Christmas gift product research",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gift-product-research-e5ea68afd2ba46c89a111d0de1dbb488"
+    },
+    {
+      "text": "Christmas gift product research",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gift-product-research-86931c742c3d477a824d717f83a1a115"
+    },
+    {
+      "text": "Five real Christmas gift listings",
+      "href": "http://127.0.0.1:18793/chat/main/five-real-christmas-gift-listings-ff7503e78b1e420e9d357e45e58aff9d"
+    },
+    {
+      "text": "Christmas gifts from five retailers",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gifts-from-five-retailers-a0d7951d57d6450da8187089f6ef16e6"
+    },
+    {
+      "text": "Christmas gifts from retail websites",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gifts-from-retail-websites-03ba3c077bf942eeb7afbb151e6dc44c"
+    },
+    {
+      "text": "Join",
+      "href": "https://www.reddit.com/r/openclaw/"
+    },
+    {
+      "text": "Join",
+      "href": "https://discord.gg/clawd"
+    },
+    {
+      "text": "Follow",
+      "href": "https://x.com/openclaw"
+    },
+    {
+      "text": "G",
+      "href": "http://127.0.0.1:18793/activity/gateway-owner"
+    },
+    {
+      "text": "gateway-owner",
+      "href": "http://127.0.0.1:18793/activity/gateway-owner"
+    },
+    {
+      "text": "Digital Gift Card",
+      "href": "https://casper.com/products/digital-gift-card"
+    },
+    {
+      "text": "The Stocking Stuffer Bundle",
+      "href": "https://www.magnatiles.com/products/the-stocking-stuffer-bundle"
+    },
+    {
+      "text": "Holiday Hustle Bundle",
+      "href": "https://www.awaytravel.com/products/holiday-hustle-bundle"
+    },
+    {
+      "text": "Men's Dasher NZ - Blizzard (Blizzard Sole)",
+      "href": "https://www.allbirds.com/products/mens-dasher-nz-blizzard"
+    },
+    {
+      "text": "Sweet and Festive Box Set",
+      "href": "https://fellowproducts.com/products/sweet-and-festive-box-set"
+    },
+    {
+      "text": "Manage plugins",
+      "href": "http://127.0.0.1:18793/plugins"
+    },
+    {
+      "text": "Control UI troubleshooting",
+      "href": "https://docs.openclaw.ai/web/control-ui#blank-control-ui-page"
+    }
+  ],
+  "shop": {
+    "label": "shop",
+    "beforeCount": 0,
+    "ok": true,
+    "after": {
+      "perCount": 1,
+      "per": [
+        {
+          "text": "1,290 tok/s mean · 1,722 p90 (server)",
+          "title": "mean: the average of 2 model calls' rates, 1,290 tok/s.\np90: 90% of 2 model calls ran at or below 1,722 tok/s.\nReported by the server: 305 tokens in 0.2 s of decode over 2 model calls."
+        }
+      ],
+      "live": false,
+      "working": false,
+      "work": "",
+      "summary": "1,290 tok/s mean · 1,722 p90 (server)",
+      "bodyLen": 1405
+    },
+    "ms": 16929,
+    "newBadges": [
+      {
+        "text": "1,290 tok/s mean · 1,722 p90 (server)",
+        "title": "mean: the average of 2 model calls' rates, 1,290 tok/s.\np90: 90% of 2 model calls ran at or below 1,722 tok/s.\nReported by the server: 305 tokens in 0.2 s of decode over 2 model calls."
+      }
+    ]
+  }
+}
