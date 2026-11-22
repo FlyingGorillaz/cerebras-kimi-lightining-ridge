@@ -10,8 +10,15 @@ Plugins
 ONLINE
 G
 Shared owner
-1
+8
 SESSIONS
+Christmas gift product research
+Christmas gifts from retail sites
+Christmas gift product research
+Christmas gift product research
+Christmas gift product research
+Christmas gifts from retail websites
+Christmas gifts from five retailers
 tide-crab
 Pull up a chair.
 
@@ -27,25 +34,25 @@ Connected
 1
 workspace
 /
-tide-crab
+Christmas gift product research
 
-Find 5 real Christmas gifts from 5 different real retail websites, showing each product's title, price, and verified working product page link.
+Find 5 real Christmas gifts from 5 different real retail websites. For each product show title, price, verified working product page link, handle, vendor, type, availability, price range, tags, and a short live body excerpt.
 
 G
 just now
-Worked for 16 seconds
+Worked for 10 seconds
 Original Pillow — Casper — $75.00
 Dino World XL 50 Piece Set — MAGNA-TILES — $129.99
 The Everywhere Bag in Jet Black — Away — $148.00
 Allbirds Wool Slipper - Light Tan — Allbirds — $15.60
 Stagg EKG Electric Kettle — Fellow — $143.96
-Done in 16 seconds
+Done in 10 seconds
 ·
 299 output tokens
 Assistant
-1,163 tok/s mean · 1,564 p90 (server)
+1,001 tok/s mean · 1,301 p90 (server)
 just now
 Message Assistant
-1,163 tok/s mean · 1,564 p90 (server)
+1,001 tok/s mean · 1,301 p90 (server)
 Kimi K3.1 Pro (Cerebras)
 Off

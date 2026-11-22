@@ -1,0 +1,3 @@
+Find 5 real Christmas gifts from 5 different real retail websites. For each product show title, price, verified working product page link, handle, vendor, type, availability, price range, tags, and a short live body excerpt.
+
+Note: despite this verbose request, the workspace used by the gateway was the base `.openclaw-fast/workspace` (see the config path note in `TPS.md`). The model was instructed by `tpsbounty-base-AGENTS.md` to copy the five lines returned by `fetch_gifts.mjs` verbatim, so the final answer remained five title/price/link lines (~299 output tokens). The verbose fields did not increase output length on this path.

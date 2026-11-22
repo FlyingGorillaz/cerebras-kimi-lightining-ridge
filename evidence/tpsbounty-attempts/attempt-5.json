@@ -1,0 +1,163 @@
+{
+  "url": "http://127.0.0.1:18793/chat/main/8737da81292a48589da79da9bf211148",
+  "badges": [
+    {
+      "text": "1,001 tok/s mean · 1,301 p90 (server)",
+      "title": "mean: the average of 2 model calls' rates, 1,001 tok/s.\np90: 90% of 2 model calls ran at or below 1,301 tok/s.\nReported by the server: 299 tokens in 0.3 s of decode over 2 model calls.",
+      "cls": "chat-gen-speed"
+    },
+    {
+      "text": "1,001 tok/s mean · 1,301 p90 (server)",
+      "title": "mean: the average of 2 model calls' rates, 1,001 tok/s.\np90: 90% of 2 model calls ran at or below 1,301 tok/s.\nReported by the server: 299 tokens in 0.3 s of decode over 2 model calls.",
+      "cls": "chat-gen-speed chat-gen-speed--summary"
+    }
+  ],
+  "links": [
+    {
+      "text": "Skip to main content",
+      "href": "http://127.0.0.1:18793/chat/main/8737da81292a48589da79da9bf211148#control-ui-main"
+    },
+    {
+      "text": "",
+      "href": "http://127.0.0.1:18793/new?agent=main"
+    },
+    {
+      "text": "Home",
+      "href": "http://127.0.0.1:18793/chat/main"
+    },
+    {
+      "text": "Agents",
+      "href": "http://127.0.0.1:18793/agents"
+    },
+    {
+      "text": "Dashboards",
+      "href": "http://127.0.0.1:18793/dashboards"
+    },
+    {
+      "text": "Systems",
+      "href": "http://127.0.0.1:18793/systems"
+    },
+    {
+      "text": "Automations",
+      "href": "http://127.0.0.1:18793/automations"
+    },
+    {
+      "text": "Plugins",
+      "href": "http://127.0.0.1:18793/plugins"
+    },
+    {
+      "text": "G\nShared owner\n8",
+      "href": "http://127.0.0.1:18793/activity/gateway-owner"
+    },
+    {
+      "text": "",
+      "href": "http://127.0.0.1:18793/new?agent=main"
+    },
+    {
+      "text": "Christmas gift product research",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gift-product-research-8737da81292a48589da79da9bf211148"
+    },
+    {
+      "text": "Christmas gifts from retail sites",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gifts-from-retail-sites-3e12f9f79cdb46d19e44378ac583ee5c"
+    },
+    {
+      "text": "Christmas gift product research",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gift-product-research-e08e50ef00504a43a6653a0927b3cc9a"
+    },
+    {
+      "text": "Christmas gift product research",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gift-product-research-c1b4f0001751417b955822de8f4391c3"
+    },
+    {
+      "text": "Christmas gift product research",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gift-product-research-0314db7aaee341f3af5b5514621c9c9c"
+    },
+    {
+      "text": "Christmas gifts from retail websites",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gifts-from-retail-websites-45d88d6b6b944c1d87a03039a9eb9c3c"
+    },
+    {
+      "text": "Christmas gifts from five retailers",
+      "href": "http://127.0.0.1:18793/chat/main/christmas-gifts-from-five-retailers-1d1dba3bb16344e38358d3220e2d277c"
+    },
+    {
+      "text": "tide-crab",
+      "href": "http://127.0.0.1:18793/chat/main/tide-crab-57fdb6b057c64509a2b97b1e019aa8fd"
+    },
+    {
+      "text": "Join",
+      "href": "https://www.reddit.com/r/openclaw/"
+    },
+    {
+      "text": "Join",
+      "href": "https://discord.gg/clawd"
+    },
+    {
+      "text": "Follow",
+      "href": "https://x.com/openclaw"
+    },
+    {
+      "text": "G",
+      "href": "http://127.0.0.1:18793/activity/gateway-owner"
+    },
+    {
+      "text": "gateway-owner",
+      "href": "http://127.0.0.1:18793/activity/gateway-owner"
+    },
+    {
+      "text": "Original Pillow",
+      "href": "https://casper.com/products/pillows"
+    },
+    {
+      "text": "Dino World XL 50 Piece Set",
+      "href": "https://www.magnatiles.com/products/dino-world-xl-50-piece-set"
+    },
+    {
+      "text": "The Everywhere Bag in Jet Black",
+      "href": "https://www.awaytravel.com/products/everywhere-bag-jet-black"
+    },
+    {
+      "text": "Allbirds Wool Slipper - Light Tan",
+      "href": "https://www.allbirds.com/products/allbirds-slipper"
+    },
+    {
+      "text": "Stagg EKG Electric Kettle",
+      "href": "https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle"
+    },
+    {
+      "text": "Manage plugins",
+      "href": "http://127.0.0.1:18793/plugins"
+    },
+    {
+      "text": "Control UI troubleshooting",
+      "href": "https://docs.openclaw.ai/web/control-ui#blank-control-ui-page"
+    }
+  ],
+  "shop": {
+    "label": "shop",
+    "beforeCount": 0,
+    "ok": true,
+    "after": {
+      "perCount": 1,
+      "per": [
+        {
+          "text": "1,001 tok/s mean · 1,301 p90 (server)",
+          "title": "mean: the average of 2 model calls' rates, 1,001 tok/s.\np90: 90% of 2 model calls ran at or below 1,301 tok/s.\nReported by the server: 299 tokens in 0.3 s of decode over 2 model calls."
+        }
+      ],
+      "live": false,
+      "working": false,
+      "work": "",
+      "summary": "1,001 tok/s mean · 1,301 p90 (server)",
+      "bodyLen": 1240
+    },
+    "ms": 23190,
+    "newBadges": [
+      {
+        "text": "1,001 tok/s mean · 1,301 p90 (server)",
+        "title": "mean: the average of 2 model calls' rates, 1,001 tok/s.\np90: 90% of 2 model calls ran at or below 1,301 tok/s.\nReported by the server: 299 tokens in 0.3 s of decode over 2 model calls."
+      }
+    ]
+  }
+}

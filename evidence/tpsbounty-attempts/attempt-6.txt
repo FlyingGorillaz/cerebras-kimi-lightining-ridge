@@ -1,0 +1,59 @@
+Skip to main content
+Assistant
+Home
+PAGES
+Agents
+Dashboards
+Systems
+Automations
+Plugins
+ONLINE
+G
+Shared owner
+9
+SESSIONS
+Christmas gift product research
+Christmas gift product research
+Christmas gifts from retail sites
+Christmas gift product research
+Christmas gift product research
+Christmas gift product research
+Christmas gifts from retail websites
+Christmas gifts from five retailers
+tide-crab
+Pull up a chair.
+
+There’s a place for you in the AI future. Join the Community on Reddit, Discord, and X.
+
+Join
+Join
+Follow
+O
+Owner
+Connected
+1 inbox item
+1
+workspace
+/
+Christmas gift product research
+
+Find 5 real Christmas gifts from 5 different real retail websites. For each product show title, price, verified working product page link, handle, vendor, type, availability, price range, tags, and a short live body excerpt.
+
+G
+just now
+Worked for 1 second
+Original Pillow — Casper — $75.00
+Dino World XL 50 Piece Set — MAGNA-TILES — $129.99
+The Everywhere Bag in Jet Black — Away — $148.00
+Allbirds Wool Slipper - Light Tan — Allbirds — $15.60
+Stagg EKG Electric Kettle — Fellow — $143.96
+Done in 1 second
+·
+299 output tokens
+Assistant
+1,139 tok/s mean · 1,547 p90 (server)
+just now
+Message Assistant
+1,139 tok/s mean · 1,547 p90 (server)
+Kimi K3.1 Pro (Cerebras)
+Off
