@@ -21,6 +21,10 @@ Live Shopify storefront `search/suggest` results fetched during the run by `fetc
 | 4 | Allbirds Wool Slipper - Light Tan | Allbirds | $15.60 | https://www.allbirds.com/products/allbirds-slipper |
 | 5 | Stagg EKG Electric Kettle | Fellow | $143.96 | https://fellowproducts.com/products/stagg-ekg-electric-pour-over-kettle |
 
+## Christmas-specific follow-up
+
+A stricter seasonal-product pass used live Shopify suggest hits for five Christmas gifts: Casper Digital Gift Card ($50), MAGNA-TILES Stocking Stuffer Bundle ($64.93), Away Holiday Hustle Bundle ($377), Allbirds Men's Dasher NZ Blizzard ($98), and Fellow Sweet and Festive Box Set ($45). Best compliant badges were two-call compact **1,084 mean · 1,441 p90**, verbose copy **1,149 mean · 1,257 p90**, and six-call live-fetch/copy **1,117 mean · 1,549 p90**. None beat the preserved 1,713 p90 yet; see `evidence/CHRISTMAS.md` and `evidence/christmas-attempts/`.
+
 ## TPS method
 
 TPS is the official OpenClaw speed patch reading Cerebras server timing: `time_info.completion_time` + `usage.completion_tokens`, decode-only. The badge is the mean of per-call rates plus nearest-rank p90; queueing, prefill, network, and tool time are excluded. See `evidence/TPS.md` for the exact math and caveats.
@@ -33,6 +37,9 @@ TPS is the official OpenClaw speed patch reading Cerebras server timing: `time_i
 - `evidence/tpsbounty-base-user-prompt.txt` — exact user prompt sent to OpenClaw, plus a note on why output stayed compact.
 - `evidence/tpsbounty-base-links-card.html` — end-card page shown at the end of the video.
 - `evidence/tpsbounty-attempts/attempt-{1..6}.{json,txt}` — extracted Control UI state for six identical-path attempts.
+- `evidence/CHRISTMAS.md` — stricter Christmas-product attempt summary.
+- `evidence/christmas-attempts/` — extracted attempt state for compact, verbose, and six-call Christmas paths.
+- `evidence/christmas-AGENTS-two-call.md`, `evidence/christmas-AGENTS-six-call.md`, and `evidence/christmas-fetch_gifts.mjs` — workspace prompt/fetcher variants for the follow-up.
 
 ## What was optimized
 

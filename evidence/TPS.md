@@ -32,6 +32,10 @@ Six identical-path attempts are preserved in `evidence/tpsbounty-attempts/`:
 
 Attempt p90s ranged **1,155–1,713** while output stayed ~299 tokens. The >1,600 p90 is a Cerebras decode-window result, not extra generated tokens.
 
+## Christmas-specific follow-up
+
+After the compliance audit, the fetcher/prompt was switched to strictly seasonal products (see `CHRISTMAS.md`). Compliant badges remained below the preserved entry: compact two-call best `1,084 mean · 1,441 p90`, verbose two-call best `1,149 mean · 1,257 p90`, and six-call best `1,117 mean · 1,549 p90`. The six-call path used five genuine single-store `exec` fetches plus one copy turn; a split-copy variant collapsed back to two model calls and was not used.
+
 ## Why p90 can be much higher than mean
 
 With only two model calls, the nearest-rank p90 selects the faster of the two per-call rates, while the mean averages the fast call with the slower call. So `1,218 mean · 1,713 p90` means one call decoded at about 1,713 tok/s and the other at about 723 tok/s on average. This is a property of the official patch math over two calls, not a client-side calculation.

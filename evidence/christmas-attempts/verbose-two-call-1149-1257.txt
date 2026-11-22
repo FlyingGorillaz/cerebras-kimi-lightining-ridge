@@ -1,0 +1,62 @@
+Skip to main content
+Assistant
+Home
+PAGES
+Agents
+Dashboards
+Systems
+Automations
+Plugins
+ONLINE
+G
+Shared owner
+24
+SESSIONS
+Christmas gifts from retail sites
+Christmas gifts from online retailers
+Christmas gift research across retailers
+Christmas gifts from retail websites
+Christmas gifts from retail sites
+Christmas gift product research
+Christmas gift product research
+Christmas gifts from retail sites
+Christmas gifts from retail websites
+Christmas gifts from retail websites
+Christmas gift product research
+Show more
+Pull up a chair.
+
+There’s a place for you in the AI future. Join the Community on Reddit, Discord, and X.
+
+Join
+Join
+Follow
+O
+Owner
+Connected
+1 inbox item
+1
+workspace
+/
+Christmas gifts from retail sites
+
+Find 5 real Christmas gifts from 5 different real retail websites. For each product show title, price, verified working product page link, handle, vendor, type, availability, price range, tags, and a short live body excerpt.
+
+G
+just now
+Worked for 2 seconds
+Digital Gift Card — $50.00 — range $50.00-$1000.00 — Casper — type Accessories — available true — handle digital-gift-card — tags non-bundle — excerpt Give the gift that everyone needs: better sleep. Want to give your loved one a gift they’ll be sure to use? Casper Digital Gift Cards make…
+The Stocking Stuffer Bundle — $64.93 — range $64.93 — MAGNA-TILES — type Bundles containing multiple play sets — available true — handle the-stocking-stuffer-bundle — tags none — excerpt Fill their stocking with even more holiday magic with the MAGNA-TILES Stocking Stuffer Bundle! Featuring two festive microMAGS Travel Sets…
+Holiday Hustle Bundle — $377.00 — range $377.00 — Away — type Bundle — available true — handle holiday-hustle-bundle — tags bundles — excerpt Whether you are navigating packed terminals, rushing between holiday flights, or heading straight from the train into an end-of-year presen…
+Men's Dasher NZ - Blizzard (Blizzard Sole) — $98.00 — range $98.00 — Allbirds — type Shoes — available true — handle mens-dasher-nz-blizzard — tags allbirds::carbon-score => undefined,allbirds::cfId => color-cf5c7262edd4a2144746ea767ceb8ea3,allbir… — excerpt A new take on our fan-favorite Dasher, made for busy days and spontaneous plans. Lightweight, breathable comfort keeps you cool as you move…
+Sweet and Festive Box Set — $45.00 — range $45.00 — Fellow — type Coffee — available true — handle sweet-and-festive-box-set — tags Use: Coffee Beans,Vendor: Fellow — excerpt DAK’s seasonal coffees always sell out, especially this one. This holiday gift set includes the Sticky Pudding filter roast with notes of c…
+Done in 2 seconds
+·
+631 output tokens
+Assistant
+1,149 tok/s mean · 1,257 p90 (server)
+just now
+Message Assistant
+1,149 tok/s mean · 1,257 p90 (server)
+Kimi K3.1 Pro (Cerebras)
+Off
