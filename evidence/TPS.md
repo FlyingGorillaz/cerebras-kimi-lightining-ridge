@@ -34,7 +34,7 @@ Attempt p90s ranged **1,155–1,713** while output stayed ~299 tokens. The >1,60
 
 ## Christmas-specific follow-up
 
-After the compliance audit, the fetcher/prompt was switched to strictly seasonal products (see `CHRISTMAS.md`). Compliant badges remained below the preserved entry: compact two-call best `1,084 mean · 1,441 p90`, verbose two-call best `1,149 mean · 1,257 p90`, and six-call best `1,117 mean · 1,549 p90`. The six-call path used five genuine single-store `exec` fetches plus one copy turn; a split-copy variant collapsed back to two model calls and was not used.
+After the compliance audit, the fetcher/prompt was switched to strictly seasonal products (see `CHRISTMAS.md`). Compliant badges remained below the preserved entry: compact two-call best `1,285 mean · 1,707 p90`, verbose two-call best `1,149 mean · 1,257 p90`, and six-call best `1,117 mean · 1,549 p90`. The six-call path used five genuine single-store `exec` fetches plus one copy turn; a split-copy variant collapsed back to two model calls and was not used.
 
 ## Why p90 can be much higher than mean
 

@@ -23,7 +23,7 @@ Live Shopify storefront `search/suggest` results fetched during the run by `fetc
 
 ## Christmas-specific follow-up
 
-A stricter seasonal-product pass used live Shopify suggest hits for five Christmas gifts: Casper Digital Gift Card ($50), MAGNA-TILES Stocking Stuffer Bundle ($64.93), Away Holiday Hustle Bundle ($377), Allbirds Men's Dasher NZ Blizzard ($98), and Fellow Sweet and Festive Box Set ($45). Best compliant badges were two-call compact **1,084 mean · 1,441 p90**, verbose copy **1,149 mean · 1,257 p90**, and six-call live-fetch/copy **1,117 mean · 1,549 p90**. None beat the preserved 1,713 p90 yet; see `evidence/CHRISTMAS.md` and `evidence/christmas-attempts/`.
+A stricter seasonal-product pass used live Shopify suggest hits for five Christmas gifts: Casper Digital Gift Card ($50), MAGNA-TILES Stocking Stuffer Bundle ($64.93), Away Holiday Hustle Bundle ($377), Allbirds Men's Dasher NZ Blizzard ($98), and Fellow Sweet and Festive Box Set ($45). Best compliant badges were two-call compact **1,285 mean · 1,707 p90**, verbose copy **1,149 mean · 1,257 p90**, and six-call live-fetch/copy **1,117 mean · 1,549 p90**. None beat the preserved 1,713 p90 yet; see `evidence/CHRISTMAS.md` and `evidence/christmas-attempts/`.
 
 ## TPS method
 
