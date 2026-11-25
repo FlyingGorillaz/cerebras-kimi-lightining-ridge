@@ -2,7 +2,7 @@
 
 ## Post-results countability note
 
-After the results announcement, the rankable lane was described as **base OpenClaw, tuned through the prompt, with no filler calls and no wrappers, proxies or edits that rewrite the model's requests**. This pack predates that patch. The Christmas `1,722 p90` run used no plugins, wrappers, proxies, hard-coded products, or burst padding, but it did use OpenClaw provider params (`temperature`, `maxTokens`, `parallel_tool_calls`, `streaming`, `extraBody.reasoning_effort`, `prompt_cache_key`) and a scripted verbatim prompt. Treat it as **boundary evidence** unless the organizers confirm those provider params are inside "base OpenClaw"; do not cite it as a ranked countable entry under the patched rules without that confirmation.
+After the results announcement, the rankable lane was described as **base OpenClaw, tuned through the prompt, with no filler calls and no wrappers, proxies or edits that rewrite the model's requests**. This pack predates that rules patch. The Christmas `1,722 p90` run used no plugins, wrappers, proxies, hard-coded products, or burst padding, but it did use OpenClaw provider params (`temperature`, `maxTokens`, `parallel_tool_calls`, `streaming`, `extraBody.reasoning_effort`, `prompt_cache_key`) and a scripted verbatim prompt. Treat it as **boundary evidence** unless the organizers confirm those provider params are inside "base OpenClaw"; do not cite it as a ranked countable entry under the post-results rules without that confirmation.
 
 ## What the speed patch measures
 
@@ -14,7 +14,7 @@ The official OpenClaw speed patch parses Cerebras streaming chat-completions chu
 
 This is server decode TPS, not wall-clock task time and not client network throughput. Queueing (`queue_time`), prefill (`prompt_time`), network, and tool execution time are excluded.
 
-## Best boundary evidence numbers (pre-patch)
+## Best boundary evidence numbers (pre-results)
 
 The recorder-rendered `evidence/christmas-1290-1722-links.mp4` shows the real Control UI session:
 
@@ -24,7 +24,7 @@ The recorder-rendered `evidence/christmas-1290-1722-links.mp4` shows the real Co
 - Discord one-number entry: `1,722 TPS p90 (1,290 mean)`
 - OpenClaw session id: `1a21ad98d0b648b79f74e6f997363b82`
 
-The earlier generic-gift recorder video `evidence/tpsbounty-base-1218-1713-links.mp4` showed `1,218 mean · 1,713 p90`; the Christmas run above is the best boundary evidence, and post-patch countability needs organizer confirmation.
+The earlier generic-gift recorder video `evidence/tpsbounty-base-1218-1713-links.mp4` showed `1,218 mean · 1,713 p90`; the Christmas run above is the best boundary evidence, and post-results countability needs organizer confirmation.
 
 For the earlier generic-gift run, six identical-path attempts are preserved in `evidence/tpsbounty-attempts/`:
 
@@ -54,7 +54,7 @@ With only two model calls, the nearest-rank p90 selects the faster of the two pe
 - `temperature: 0`, `prompt_cache_key: "santa-short-pv"`, agent `maxTokens: 4096`.
 - Minimal tool surface: `exec` only, `toolSearch: false`, `codeMode: false`, `sessionObserver: false`, memory slot `none`.
 - Prompt hack for a reasoning model: mechanical verbatim copier, forbidden deliberation words, one `exec` call, then copy the five returned lines with no tools/chatter.
-- Post-patch disclosure: the provider params above are OpenClaw model settings, not a plugin/wrapper/proxy; under a strict prompt-only reading this run is boundary evidence.
+- Post-results disclosure: the provider params above are OpenClaw model settings, not a plugin/wrapper/proxy; under a strict prompt-only reading this run is boundary evidence.
 
 ## Longer-output test
 
@@ -64,7 +64,7 @@ The user prompt asked for title, price, link, handle, vendor, type, availability
 
 Repo studied: `https://github.com/ykundesu/Cerebras-KimiK3-1-Pro-TPSBounty`. The super-optimized entry uses burst mode / `max_completion_tokens=2` for “Quick status check” turns. That can inflate per-call decode rate through tiny completion calls and was **not** used as bounty evidence here.
 
-The pieces we kept were stock OpenClaw config minimization, low reasoning, a minimal tool surface, and a verbatim copy turn after a live fetch; under the pre-patch rules these were treated as compliant, and post-patch countability is unresolved for provider params.
+The pieces we kept were stock OpenClaw config minimization, low reasoning, a minimal tool surface, and a verbatim copy turn after a live fetch; under the pre-results rules these were treated as compliant, and post-results countability is unresolved for provider params.
 
 ## Config/workspace note
 
@@ -77,7 +77,7 @@ Cerebras Kimi K3.1 Pro trial intermittently returned `429 queue_exceeded` / “h
 ## Reproduction outline
 
 1. Use patched OpenClaw with the official speed patch so Cerebras `time_info`/`usage` is parsed into `serverGeneration` and the UI badge path.
-2. For boundary-evidence reproduction configure the Cerebras provider with model `moonshotai-kimi-k3.1-pro-trial` (see `tpsbounty-base-openclaw.json`; keep the API key in `CEREBRAS_API_KEY`). For a strict patched-rules run, start from stock/base OpenClaw and tune only the prompt.
+2. For boundary-evidence reproduction configure the Cerebras provider with model `moonshotai-kimi-k3.1-pro-trial` (see `tpsbounty-base-openclaw.json`; keep the API key in `CEREBRAS_API_KEY`). For a strict post-results-rules run, start from stock/base OpenClaw and tune only the prompt.
 3. Put `christmas-AGENTS-two-call.md` and `christmas-fetch_gifts.mjs` in the configured workspace.
 4. Send the Christmas product prompt shown in `christmas-attempts/compact-two-call-1290-1722.txt`. It must perform one live `exec` fetch for five seasonal products and then copy the five lines verbatim.
 5. Run several attempts, keep the best official speed-patch badge, and record the session plus the `christmas-links-card.html` end card.
