@@ -1,12 +1,16 @@
 # cerebras-kimi-lightining-ridge
 
-Transparency pack for the OpenClaw Speed Bounty entry: patched OpenClaw + Kimi K3.1 Pro on Cerebras, finding five real Christmas gifts from real retail sites with live product-page links.
+Transparency pack for the OpenClaw Speed Bounty boundary experiments: patched OpenClaw + Kimi K3.1 Pro on Cerebras, finding five real Christmas gifts from real retail sites with live product-page links.
 
-## Entry
+## Post-results countability note
+
+After the results announcement, the rankable lane was described as **base OpenClaw, tuned through the prompt, with no filler calls and no wrappers, proxies or edits that rewrite the model's requests**. This pack predates that patch. The Christmas `1,722 p90` run used no plugins, wrappers, proxies, hard-coded products, or burst padding, but it did use OpenClaw provider params (`temperature`, `maxTokens`, `parallel_tool_calls`, `streaming`, `extraBody.reasoning_effort`, `prompt_cache_key`) and a scripted verbatim prompt. Treat it as **boundary evidence** unless the organizers confirm those provider params are inside "base OpenClaw"; do not cite it as a ranked countable entry under the patched rules without that confirmation.
+
+## Best boundary evidence (pre-patch)
 
 - Video: `evidence/christmas-1290-1722-links.mp4` — recorder-rendered; shows the OpenClaw session badge, five Christmas products, then a slow end-card scroll through all five full product URLs.
-- Speed-patch badge: **1,290 tok/s mean · 1,722 p90 (server)**.
-- Discord one-number text: `Speed Bounty entry: 1,722 TPS p90 (1,290 mean)`.
+- Boundary speed-patch badge: **1,290 tok/s mean · 1,722 p90 (server)**.
+- Pre-patch Discord text used: `Speed Bounty entry: 1,722 TPS p90 (1,290 mean)` — not a patched-rules ranked claim without organizer confirmation.
 - OpenClaw session id: `1a21ad98d0b648b79f74e6f997363b82`.
 
 ## Christmas products
@@ -23,7 +27,7 @@ Live Shopify storefront `search/suggest` results fetched during the run by `chri
 
 ## Earlier generic-gift run
 
-A prior compliant run on the same patched OpenClaw + Kimi K3.1 Pro/Cerebras path used generic giftable products and reached **1,218 mean · 1,713 p90** (`evidence/tpsbounty-base-1218-1713-links.mp4`). The Christmas run above beats that p90 with stricter seasonal products.
+A prior boundary run on the same pre-patch OpenClaw + Kimi K3.1 Pro/Cerebras path used generic giftable products and reached **1,218 mean · 1,713 p90** (`evidence/tpsbounty-base-1218-1713-links.mp4`). The Christmas run above beats that p90 with stricter seasonal products.
 
 ## TPS method
 
@@ -47,7 +51,8 @@ TPS is the official OpenClaw speed patch reading Cerebras server timing: `time_i
 - `temperature: 0`, `prompt_cache_key: "santa-short-pv"`, agent `maxTokens: 4096`.
 - Minimal tool surface: `exec` only, `toolSearch: false`, `codeMode: false`, `sessionObserver: false`, memory slot `none`.
 - Mechanical verbatim prompt: turn 1 calls `exec` once for the live Christmas fetch; turn 2 copies the five returned lines verbatim.
-- Multiple compliant attempts were run on the same path; the best official badge was kept.
+- Multiple pre-patch attempts were run on the same path; the best official badge was kept.
+- Post-patch disclosure: the provider params above are OpenClaw model settings, not a plugin/wrapper/proxy; under a strict prompt-only reading this run is boundary evidence.
 
 Output stayed ~305 tokens because the fetcher/prompt returns five compact lines. The >1,700 p90 is Cerebras decode-window variance across attempts, not extra generated tokens and not burst padding.
 
@@ -57,12 +62,13 @@ Output stayed ~305 tokens because the fetcher/prompt returns five compact lines.
 - No non-Kimi bounty model; GPT-OSS/Qwen/other models were not used for this evidence.
 - No client-side TPS spoofing; the badge is the official speed patch server timing.
 - No `max_completion_tokens=2` burst/padding path from the TPSBounty super-optimized entry.
+- No santa-fast/trim plugin, proxy, or request-rewriting wrapper in the shipped Christmas path.
 - No API keys or secrets are committed; configs use only the `${CEREBRAS_API_KEY}` placeholder.
 
 ## Reproduce
 
 1. Run patched OpenClaw with the official speed patch so Cerebras `time_info`/`usage` reaches `serverGeneration` and the Control UI badge.
-2. Use `evidence/tpsbounty-base-openclaw.json` with `CEREBRAS_API_KEY` set in the environment.
+2. For boundary-evidence reproduction use `evidence/tpsbounty-base-openclaw.json` with `CEREBRAS_API_KEY` set; for a strict patched-rules run, start from stock/base OpenClaw and tune only the prompt.
 3. Put `christmas-AGENTS-two-call.md` and `christmas-fetch_gifts.mjs` in the configured workspace.
 4. Send the Christmas product prompt shown in `christmas-attempts/compact-two-call-1290-1722.txt`, run several attempts, and keep the best official badge.
 5. Record the Control UI session badge, then scroll `christmas-links-card.html` so all five URLs are readable.
